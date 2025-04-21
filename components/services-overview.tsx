@@ -39,22 +39,24 @@ export default function ServicesOverview() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
               <a key={index} href={service.href} className="group transition-transform magic-hover">
                 <Card className="h-full border-2 border-gray-100 hover:border-red-100 transition-colors">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6" />
+                  <CardHeader className="pb-2 sm:pb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mb-3 sm:mb-4">
+                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
-                    <CardTitle className="text-xl group-hover:text-red-600 transition-colors">
+                    <CardTitle className="text-lg sm:text-xl group-hover:text-red-600 transition-colors">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-600">{service.description}</CardDescription>
+                    <CardDescription className="text-sm sm:text-base text-gray-600">
+                      {service.description}
+                    </CardDescription>
                   </CardContent>
                 </Card>
               </a>

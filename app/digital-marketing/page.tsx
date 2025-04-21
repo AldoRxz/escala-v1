@@ -12,21 +12,21 @@ export default function DigitalMarketingPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-red-50 to-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-red-50 to-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <MagicReveal>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                   Servicios de <span className="text-red-600">Marketing</span> Digital
                 </h1>
               </MagicReveal>
               <MagicReveal delay={200}>
-                <p className="text-lg md:text-xl text-gray-600 mb-8">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
                   Estrategias de marketing basadas en datos que ofrecen resultados medibles y hacen crecer tu negocio.
                 </p>
               </MagicReveal>
               <MagicReveal delay={400}>
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover">
+                <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover w-full sm:w-auto">
                   Impulsa tu Presencia Online
                 </Button>
               </MagicReveal>
@@ -38,17 +38,17 @@ export default function DigitalMarketingPage() {
         <DigitalMarketing />
 
         {/* Case Studies Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
               <MagicText text="Casos de Éxito" />
-              <p className="text-lg text-gray-600 mt-4">
+              <p className="text-base sm:text-lg text-gray-600 mt-4">
                 Mira cómo hemos ayudado a empresas como la tuya a lograr resultados extraordinarios con nuestras
                 estrategias de marketing digital.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   client: "TechStart",
@@ -77,21 +77,24 @@ export default function DigitalMarketingPage() {
               ].map((caseStudy, index) => (
                 <MagicReveal key={index} delay={index * 100}>
                   <Card className="h-full border-2 border-gray-100 overflow-hidden magic-hover">
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-40 sm:h-48 overflow-hidden">
                       <img
                         src={caseStudy.image || "/placeholder.svg"}
                         alt={caseStudy.client}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 sm:p-6">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-red-600">{caseStudy.client}</span>
+                        <span className="text-xs sm:text-sm font-medium text-red-600">{caseStudy.client}</span>
                         <span className="text-xs bg-gray-100 px-2 py-1 rounded">{caseStudy.industry}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{caseStudy.title}</h3>
-                      <p className="text-gray-600 mb-4">{caseStudy.description}</p>
-                      <Button variant="outline" className="w-full border-red-600 text-red-600 hover:bg-red-50">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{caseStudy.title}</h3>
+                      <p className="text-xs sm:text-sm text-gray-600 mb-4">{caseStudy.description}</p>
+                      <Button
+                        variant="outline"
+                        className="w-full border-red-600 text-red-600 hover:bg-red-50 text-xs sm:text-sm"
+                      >
                         Leer Caso de Estudio
                       </Button>
                     </CardContent>
@@ -103,16 +106,18 @@ export default function DigitalMarketingPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Por Qué Elegirnos</h2>
-              <p className="text-lg text-gray-600">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+                Por Qué Elegirnos
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600">
                 No somos solo otra agencia de marketing. Esto es lo que nos diferencia.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {[
                 {
                   icon: Target,
@@ -140,19 +145,19 @@ export default function DigitalMarketingPage() {
                 },
               ].map((feature, index) => (
                 <MagicReveal key={index} delay={index * 100}>
-                  <div className="bg-gray-50 p-6 rounded-lg shadow-sm magic-hover">
-                    <div className="w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-4">
-                      <feature.icon className="h-6 w-6" />
+                  <div className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-sm magic-hover">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-3 sm:mb-4">
+                      <feature.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600">{feature.description}</p>
                   </div>
                 </MagicReveal>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover">
+            <div className="text-center mt-8 sm:mt-12">
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover w-full sm:w-auto">
                 Programa una Llamada Estratégica
               </Button>
             </div>

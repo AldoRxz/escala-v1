@@ -45,20 +45,20 @@ export default function DigitalMarketing() {
   return (
     <section id="digital-marketing" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Marketing Digital</h2>
-          <p className="text-lg text-gray-600">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Marketing Digital</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600">
             Estrategias de marketing basadas en datos que ofrecen resultados medibles y hacen crecer tu negocio.
           </p>
         </div>
 
         <Tabs defaultValue="meta" className="w-full">
-          <div className="flex justify-center mb-8">
-            <TabsList>
+          <div className="flex justify-center mb-6 sm:mb-8 overflow-x-auto pb-2 -mx-4 px-4">
+            <TabsList className="flex-nowrap">
               {marketingServices.map((service) => (
-                <TabsTrigger key={service.id} value={service.id} className="px-6">
-                  <service.icon className="h-4 w-4 mr-2" />
-                  {service.name}
+                <TabsTrigger key={service.id} value={service.id} className="px-3 sm:px-6 whitespace-nowrap">
+                  <service.icon className="h-4 w-4 mr-1 sm:mr-2" />
+                  <span className="text-xs sm:text-sm">{service.name}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -66,29 +66,29 @@ export default function DigitalMarketing() {
 
           {marketingServices.map((service) => (
             <TabsContent key={service.id} value={service.id}>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
-                  <p className="text-lg text-gray-600 mb-8">{service.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{service.name}</h3>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8">{service.description}</p>
 
-                  <div className="grid grid-cols-3 gap-4 mb-8">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
                     {service.metrics.map((metric, index) => (
                       <Card key={index} className="border-2 border-gray-100 magic-hover">
-                        <CardContent className="p-4 text-center">
-                          <p className="text-sm text-gray-500 mb-1">{metric.label}</p>
-                          <p className="text-2xl font-bold text-red-600">{metric.value}</p>
+                        <CardContent className="p-3 sm:p-4 text-center">
+                          <p className="text-xs sm:text-sm text-gray-500 mb-0.5 sm:mb-1">{metric.label}</p>
+                          <p className="text-lg sm:text-2xl font-bold text-red-600">{metric.value}</p>
                         </CardContent>
                       </Card>
                     ))}
                   </div>
 
-                  <Button className="bg-red-600 hover:bg-red-700 magic-hover">Saber Más</Button>
+                  <Button className="bg-red-600 hover:bg-red-700 magic-hover w-full sm:w-auto">Saber Más</Button>
                 </div>
 
-                <div className="relative">
+                <div className="relative mt-8 lg:mt-0">
                   <div className="aspect-video rounded-xl bg-gray-100 shadow-lg overflow-hidden">
                     {service.id === "meta" && (
-                      <div className="grid grid-cols-2 gap-4 p-4">
+                      <div className="grid grid-cols-2 gap-2 sm:gap-4 p-2 sm:p-4">
                         <img
                           src="/placeholder.svg?height=150&width=200"
                           alt="Facebook ad campaign"
@@ -102,7 +102,7 @@ export default function DigitalMarketing() {
                       </div>
                     )}
                     {service.id === "google" && (
-                      <div className="p-4">
+                      <div className="p-2 sm:p-4">
                         <img
                           src="/placeholder.svg?height=300&width=500"
                           alt="Google Ads dashboard"
@@ -111,7 +111,7 @@ export default function DigitalMarketing() {
                       </div>
                     )}
                     {service.id === "email" && (
-                      <div className="p-4">
+                      <div className="p-2 sm:p-4">
                         <img
                           src="/placeholder.svg?height=300&width=500"
                           alt="Email campaign results"
@@ -122,29 +122,29 @@ export default function DigitalMarketing() {
                   </div>
 
                   {/* Results chart */}
-                  <Card className="absolute -bottom-8 -left-8 w-64 border-0 shadow-xl">
-                    <CardContent className="p-4">
+                  <Card className="absolute -bottom-8 -left-8 w-48 sm:w-64 border-0 shadow-xl hidden sm:block">
+                    <CardContent className="p-3 sm:p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold text-gray-900">Resultados de Campaña</h4>
-                        <BarChart className="h-4 w-4 text-blue-600" />
+                        <h4 className="font-semibold text-gray-900 text-xs sm:text-sm">Resultados de Campaña</h4>
+                        <BarChart className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600" />
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-1.5 sm:space-y-2">
                         <div>
-                          <div className="flex justify-between text-sm mb-1">
+                          <div className="flex justify-between text-xs sm:text-sm mb-0.5 sm:mb-1">
                             <span className="text-gray-600">Antes</span>
                             <span className="text-gray-900 font-medium">1,245</span>
                           </div>
-                          <div className="h-2 bg-gray-200 rounded-full">
-                            <div className="h-2 bg-gray-400 rounded-full w-1/3"></div>
+                          <div className="h-1.5 sm:h-2 bg-gray-200 rounded-full">
+                            <div className="h-1.5 sm:h-2 bg-gray-400 rounded-full w-1/3"></div>
                           </div>
                         </div>
                         <div>
-                          <div className="flex justify-between text-sm mb-1">
+                          <div className="flex justify-between text-xs sm:text-sm mb-0.5 sm:mb-1">
                             <span className="text-gray-600">Después</span>
                             <span className="text-gray-900 font-medium">3,842</span>
                           </div>
-                          <div className="h-2 bg-gray-200 rounded-full">
-                            <div className="h-2 bg-blue-600 rounded-full w-full"></div>
+                          <div className="h-1.5 sm:h-2 bg-gray-200 rounded-full">
+                            <div className="h-1.5 sm:h-2 bg-blue-600 rounded-full w-full"></div>
                           </div>
                         </div>
                       </div>
@@ -156,9 +156,11 @@ export default function DigitalMarketing() {
           ))}
         </Tabs>
 
-        <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">¿Listo para Hacer Crecer tu Negocio?</h3>
-          <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover">
+        <div className="mt-12 sm:mt-20 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+            ¿Listo para Hacer Crecer tu Negocio?
+          </h3>
+          <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover w-full sm:w-auto">
             Obtén una Consulta Gratuita
           </Button>
         </div>

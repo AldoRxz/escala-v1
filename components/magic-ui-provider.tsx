@@ -1,13 +1,18 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect } from "react"
-import { MagicCursor } from "@/lib/magic-ui"
+import dynamic from "next/dynamic"
+
+// ⚠️ IMPORT DINÁMICO del componente MagicCursor para evitar errores de hidratación
+const MagicCursor = dynamic(
+  () => import("@/lib/magic-ui").then((mod) => mod.MagicCursor),
+  { ssr: false }
+)
 
 export default function MagicUIProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Inicializar las animaciones cuando el componente se monta
+    // Inicializa las animaciones mágicas al montar el componente
     const revealElements = document.querySelectorAll(".magic-reveal")
 
     const observer = new IntersectionObserver(
@@ -23,7 +28,7 @@ export default function MagicUIProvider({ children }: { children: React.ReactNod
         root: null,
         rootMargin: "0px",
         threshold: 0.1,
-      },
+      }
     )
 
     revealElements.forEach((el) => observer.observe(el))
