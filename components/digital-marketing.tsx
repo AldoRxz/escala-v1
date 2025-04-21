@@ -156,14 +156,6 @@ export default function DigitalMarketing() {
           ))}
         </Tabs>
 
-        <div className="mt-12 sm:mt-20 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
-            ¿Listo para Hacer Crecer tu Negocio?
-          </h3>
-          <Button size="lg" className="bg-red-600 hover:bg-red-700 magic-hover w-full sm:w-auto">
-            Obtén una Consulta Gratuita
-          </Button>
-        </div>
       </div>
     </section>
   )

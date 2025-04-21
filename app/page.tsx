@@ -6,6 +6,8 @@ import WebDevelopment from "@/components/web-development"
 import Automations from "@/components/automations"
 import Chatbots from "@/components/chatbots"
 import DigitalMarketing from "@/components/digital-marketing"
+import CallToAction from "@/components/CallToAction"
+
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -25,6 +27,7 @@ export default function Home() {
         <Automations />
         <Chatbots />
         <DigitalMarketing />
+        <CallToAction />
       </main>
       <Footer />
     </div>
