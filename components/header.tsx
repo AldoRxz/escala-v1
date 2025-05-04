@@ -8,12 +8,13 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 
 const navItems = [
-  { name: "Inicio", href: "#home" },
-  { name: "Desarrollo Web", href: "#web-development" },
-  { name: "Automatizaciones", href: "#automations" },
-  { name: "Chatbots", href: "#chatbots" },
-  { name: "Marketing Digital", href: "#digital-marketing" },
+  { name: "Inicio", href: "/" },
+  { name: "Desarrollo Web", href: "/desarrollo-web" },
+  { name: "Automatizaciones", href: "/automatizaciones" },
+  { name: "Chatbots", href: "/chat-bots" },
+  { name: "Marketing Digital", href: "/marketing-digital" },
 ]
+
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
