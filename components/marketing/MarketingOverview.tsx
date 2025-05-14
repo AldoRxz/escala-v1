@@ -39,15 +39,16 @@ export default function MarketingOverview() {
           {features.map((item, index) => {
             const Icon = item.icon
             return (
-              <Card key={index} className="border-2 border-gray-100 hover:border-red-600 transition-all shadow-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
-                </CardContent>
-              </Card>
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col items-center text-center h-full transform transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-200"
+              >
+                <div className="w-14 h-14 mb-4 rounded-full bg-red-100 text-red-600 flex items-center justify-center shadow-sm">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
             )
           })}
         </div>
