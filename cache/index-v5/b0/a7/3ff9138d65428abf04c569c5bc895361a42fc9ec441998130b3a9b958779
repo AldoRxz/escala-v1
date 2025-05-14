@@ -1,0 +1,2 @@
+
+badee5e09a92647382190cef43becc4e87db7524	{"key":"make-fetch-happen:request-cache:https://reactbits.dev/ts/tailwind/jsrepo-manifest.json","integrity":null,"time":1747198275476,"size":null,"metadata":{"time":1747198275476,"url":"https://reactbits.dev/ts/tailwind/jsrepo-manifest.json","reqHeaders":{},"resHeaders":{"cache-control":"public, max-age=0, must-revalidate","content-type":"text/plain","date":"Wed, 14 May 2025 04:51:25 GMT","location":"https://www.reactbits.dev/ts/tailwind/jsrepo-manifest.json"},"options":{"compress":true},"status":308}}
