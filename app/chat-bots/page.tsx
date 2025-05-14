@@ -1,16 +1,24 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
+import ChatbotsHero from "@/components/chatbots/ChatbotsHero"
+import ChatbotBenefits from "@/components/chatbots/ChatbotBenefits"
+import ChatbotChannels from "@/components/chatbots/ChatbotChannels"
+import ChatbotStats from "@/components/chatbots/ChatbotStats"
+import ChatbotContactForm from "@/components/chatbots/ChatbotContactForm"
+import ChatbotOverview from "@/components/chatbots/ChatbotOverview"
+
 export default function ChatBotsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 p-10">
-        <h1 className="text-3xl font-bold mb-4">Chat Bots</h1>
-        <p className="text-lg text-gray-700">
-          Automatiza la atención al cliente con bots inteligentes que trabajan 24/7,
-          ofreciendo respuestas rápidas, precisas y personalizadas.
-        </p>
+      <main className="flex-1">
+        <ChatbotsHero />
+        <ChatbotOverview />
+        <ChatbotBenefits />
+        {/* <ChatbotChannels /> */}
+        <ChatbotStats />
+        <ChatbotContactForm />
       </main>
       <Footer />
     </div>
