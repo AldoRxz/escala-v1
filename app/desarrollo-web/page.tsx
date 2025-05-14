@@ -1,16 +1,24 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import CallToAction from "@/components/CallToAction"
 
-export default function DesarrolloWebPage() {
+import WebHero from "@/components/web-development/WebHero"
+import WebOverview from "@/components/web-development/WebOverview"
+import WebTechnologies from "@/components/web-development/WebTechnologies"
+import DevelopmentProcess from "@/components/web-development/DevelopmentProcess"
+import WebContactForm from "@/components/web-development/WebContactForm"
+
+export default function WebDevelopmentPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 p-10">
-        <h1 className="text-3xl font-bold mb-4">Desarrollo Web</h1>
-        <p className="text-lg text-gray-700">
-          Creamos sitios web rápidos, modernos y adaptados a tu marca, pensados para
-          atraer, convertir y fidelizar a tus clientes.
-        </p>
+      <main className="flex-1">
+        <WebHero />
+        <WebOverview />
+        <WebTechnologies />
+        <DevelopmentProcess />
+        <WebContactForm />
+        {/* <CallToAction /> */}
       </main>
       <Footer />
     </div>
