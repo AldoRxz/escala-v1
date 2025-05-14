@@ -2,6 +2,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 import DigitalMarketing from "@/components/digital-marketing"
+
 import MarketingHero from "@/components/marketing/MarketingHero"
 import ResultadosMarketing from "@/components/marketing/ResultadosMarketing"
 import MarketingContactForm from "@/components/marketing/MarketingContactForm"
